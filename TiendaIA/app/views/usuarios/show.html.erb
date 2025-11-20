@@ -1,0 +1,48 @@
+<h1>Mi cuenta</h1>
+<div class="page-container">
+  <div class="fixed-user-details">
+    <h2>Mis Datos</h2>
+    <table class="custom-table">
+      <tr>
+        <th>Nombre</th>
+        <td><%= @usuario.nombre %></td>
+      </tr>
+      <tr>
+        <th>Ciudad</th>
+        <td><%= @usuario.ciudad %></td>
+      </tr>
+      <tr>
+        <th>Teléfono</th>
+        <td><%= @usuario.tlf %></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><%= @usuario.email %></td>
+      </tr>
+      <tr>
+        <td>
+          <%= link_to "Edit Usuario", edit_usuario_path(@usuario), class: "custom-button" %>
+        </td>
+        <td>
+          <%= link_to "Borrar Usuario", usuario_path(@usuario), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "custom-button delete-button" %>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="anuncios-container-usu">
+    <h2>Mis Anuncios</h2>
+    <div class="anuncios-grid">
+      <% @anuncios.each do |anuncio| %>
+    
+          <%= render partial: 'anuncios/anuncio', locals: { anuncio: anuncio } %>
+       
+      <% end %>
+    </div>
+  </div>
+
+  <div class="ad-form-container">
+    <h2>Subir anuncio</h2>
+    <%= render '/anuncios/form' %>
+  </div>
+</div>

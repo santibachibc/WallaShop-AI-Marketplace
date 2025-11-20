@@ -1,0 +1,7 @@
+<h1>Anuncios</h1>
+
+<div class="anuncios-container">
+  <% @anuncios.each do |anuncio| %>
+    <%= render partial: 'anuncio', locals: { anuncio: anuncio } %>
+  <% end %>
+</div>

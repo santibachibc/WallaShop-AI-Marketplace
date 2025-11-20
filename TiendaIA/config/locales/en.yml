@@ -1,0 +1,27 @@
+es:
+  activerecord:
+    models:
+      usuario: "Usuario"
+    attributes:
+      usuario:
+        email: "Email"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de la contraseña"
+        nombre: "Nombre"
+        ciudad: "Ciudad"
+        tlf: "Teléfono"
+    errors:
+      models:
+        usuario:
+          attributes:
+            email:
+              taken: "ya está en uso"
+            password:
+              too_short: "es demasiado corta (mínimo %{count} caracteres)"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "no puede estar en blanco"
+      taken: "ya está en uso"
+      too_short: "es demasiado corto (mínimo %{count} caracteres)"
+      confirmation: "no coincide con %{attribute}"

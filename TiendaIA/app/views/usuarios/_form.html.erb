@@ -1,0 +1,55 @@
+<div class="register-form-container">
+  <%= form_with model: @usuario, local: true do |form| %>
+    <div class="register-form-row">
+      <div class="register-form-group">
+        <%= form.label :nombre %>
+        <%= form.text_field :nombre, class: "register-form-control" %>
+        <% @usuario.errors.full_messages_for(:nombre).each do |message| %>
+          <div class="register-error-message"><%= message %></div>
+        <% end %>
+      </div>
+      <div class="register-form-group">
+        <%= form.label :ciudad %>
+        <%= form.text_field :ciudad, class: "register-form-control" %>
+        <% @usuario.errors.full_messages_for(:ciudad).each do |message| %>
+          <div class="register-error-message"><%= message %></div>
+        <% end %>
+      </div>
+    </div>
+    <div class="register-form-row">
+      <div class="register-form-group">
+        <%= form.label :tlf %>
+        <%= form.number_field :tlf, class: "register-form-control" %>
+        <% @usuario.errors.full_messages_for(:tlf).each do |message| %>
+          <div class="register-error-message"><%= message %></div>
+        <% end %>
+      </div>
+      <div class="register-form-group">
+        <%= form.label :email %>
+        <%= form.email_field :email, class: "register-form-control" %>
+        <% @usuario.errors.full_messages_for(:email).each do |message| %>
+          <div class="register-error-message"><%= message %></div>
+        <% end %>
+      </div>
+    </div>
+    <div class="register-form-row">
+      <div class="register-form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "register-form-control" %>
+        <% @usuario.errors.full_messages_for(:password).each do |message| %>
+          <div class="register-error-message"><%= message %></div>
+        <% end %>
+      </div>
+      <div class="register-form-group">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation, class: "register-form-control" %>
+        <% @usuario.errors.full_messages_for(:password_confirmation).each do |message| %>
+          <div class="register-error-message"><%= message %></div>
+        <% end %>
+      </div>
+    </div>
+    <div>
+      <%= form.submit "Enviar", class: "register-btn-submit" %>
+    </div>
+  <% end %>
+</div>

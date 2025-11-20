@@ -1,0 +1,20 @@
+<div class="anuncio">
+  <div class="anunciop">
+    <h3><%= anuncio.titulo %></h3>
+    <p><%= anuncio.descripcion %></p>
+    <p><strong>Estado:</strong> <%= anuncio.estado %></p>
+    <p><strong>Marca:</strong> <%= anuncio.marca %></p>
+    <p><strong>Modelo:</strong> <%= anuncio.modelo %></p>
+    <p><strong>Daño/Marcas de uso:</strong> <%= anuncio.daño %></p>
+    <% if anuncio.image.attached? %>
+      <p>
+        <%= image_tag anuncio.image %>
+      </p>
+    <% end %>
+    <% if @mostrar_boton_eliminar %>
+ 
+      <%= link_to "Borrar Anuncio", usuario_anuncio_path(anuncio.usuario, anuncio), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "custom-button delete-button" %>
+      
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,481 @@
+/*-----------------Header applications-----------------------------------*/
+body{
+    background-color: rgb(180, 210, 234);
+}
+
+/* Estilos para la cabecera */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+   border-radius: 10px;
+}
+
+
+/* Estilos para el nav y los enlaces */
+nav{
+    margin-left: 80px;
+}
+.nav-link, .sesion  {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-left: 90px;
+    border-radius: 10px;
+    font-weight:500;
+    font-size: large;
+    border: 1px solid transparent;
+
+   
+}
+
+.sesion{
+    margin-left: 700px;
+}
+
+.nav-link:hover, .sesion:hover {
+    background-color: #919090;
+    border-color: #fff;
+    color: #fff;
+}
+
+
+
+.logo{
+    margin-left: 30px;
+    width: 10%;
+   
+}
+
+
+
+
+
+/*----------Footer.........*/
+
+
+/*-----------------Footer Styles---------------------*/
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%; /* Opcional: Ajustar para todo el ancho si es necesario */
+  
+   
+    padding: 10px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+footer p {
+    text-align: right;
+    font-weight: 700;
+    color: #000000; /* Ajustar color según diseño */
+    margin: 0;
+}
+
+
+/*-------------------SHOW ANUNCIOS-----------------*/
+
+
+
+/* Estilos para la lista de anuncios */
+.anuncios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Cambiado a flex-start para alinear a la izquierda */
+    padding: 20px;
+    
+}
+
+/* Estilos para cada anuncio */
+.anuncio {
+    width: 400px; /* Aumentado el tamaño del ancho */
+    padding: 10px;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;  /* Añadido */
+    flex-direction: column;  /* Añadido */
+}
+
+.anunciop {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    flex-grow: 1;  /* Añadido */
+    display: flex;  /* Añadido */
+    flex-direction: column;  /* Añadido */
+    justify-content: space-between;  /* Añadido */
+}
+
+.anuncio h3 {
+    margin-top: 0;
+    text-align: center; /* Centrado el título */
+    flex-shrink: 0;  /* Añadido */
+}
+
+.anuncio p {
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(109, 109, 109);
+    flex-shrink: 0;  /* Añadido */
+}
+
+.anuncio img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    flex-shrink: 0;  /* Añadido */
+}
+
+/* Ajustar el botón para que esté al final */
+.anuncio .custom-button {
+    align-self: flex-end;  /* Añadido */
+    flex-shrink: 0;  /* Añadido */
+}
+
+/* Estilo adicional para asegurar altura mínima */
+.anunciop {
+    min-height: 250px;  /* Ajusta este valor según sea necesario */
+}
+
+.anuncio p:nth-child(7) {
+    /* Estilos específicospara el quinto <p> dentro de .anuncio */
+    border-bottom: none;
+}
+
+
+
+/* Estilos adicionales */
+
+
+.active a {
+    color: rgb(0, 0, 0);
+}
+
+#logo {
+    width: 10%;
+    position: relative;
+    right: 110px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(119, 119, 119, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(119, 119, 119, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* Respuesta */
+@media (max-width: 768px) {
+    .anuncio {
+        width: 100%;
+    }
+}
+
+/*-----------------Form Styles---------------------*/
+/* Estilo para el contenedor del formulario de inicio de sesión */
+.login-form-container {
+    width: 400px;
+    margin: 50px auto; /* Centrar el formulario en la página */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar el texto dentro del formulario */
+}
+
+
+
+/* Estilo para los grupos de formulario del inicio de sesión */
+.login-form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo para los campos de formulario del inicio de sesión */
+.login-form-control {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para el botón de enviar del inicio de sesión */
+.login-btn-submit {
+    background-color: #e6af17;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-btn-submit:hover {
+    background-color: #d99b16;
+    color: #fff;
+}
+
+/* Estilo para el enlace de crear cuenta */
+.login-btn-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los mensajes de error */
+.login-error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+/*-----------------Register Form Styles---------------------*/
+/* Estilo para el contenedor del formulario de registro */
+.register-form-container {
+    width: 600px;
+    margin: 50px auto; /* Centrar el formulario en la página */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Estilo para el contenedor de las filas */
+.register-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada grupo de formulario */
+.register-form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+/* Estilo para los campos de formulario del registro */
+.register-form-control {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Estilo para el botón de enviar del registro */
+.register-btn-submit {
+    background-color: #e6af17;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.register-btn-submit:hover {
+    background-color: #d99b16;
+    color: #fff;
+}
+
+/* Estilo para los mensajes de error del registro */
+.register-error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+/*--------------Show Usuaios-----------*/
+
+
+
+
+
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* La columna del medio es el doble de ancha */
+    gap: 20px; /* Espacio entre las columnas */
+  }
+  
+
+
+  .fixed-user-details {
+    padding: 20px;
+    position: sticky; /* Hacer fijo */
+    top: 0; /* Arriba de la ventana */
+    height: fit-content; /* Opcional: ajustar altura automáticamente */
+  }
+
+  .anuncios-container-usu {
+    padding: 20px;
+  }
+  
+  .ad-form-container {
+    padding: 20px;
+    position: sticky; /* Hacer fijo */
+    top: 0; /* Arriba de la ventana */
+    height: fit-content; 
+    
+}
+  
+
+
+.ad-form-container form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .ad-form-container form label {
+    font-weight: bold; /* Texto en negrita para las etiquetas */
+  }
+
+  
+  .ad-form-container form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Color de fondo para el botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ad-form-container form input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón sobre el botón */
+  }
+
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+   
+  }
+  
+  .custom-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  
+  }
+  
+  .custom-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra al pasar el ratón */
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+  }
+  
+  .anuncios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre los elementos */
+  }
+
+
+  /*Aplicatinn-.......................*/
+  .flash {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    opacity: 0.9;
+  }
+
+  .flash.notice {
+    background-color: #d2ffea;
+    color: #119448;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: none;
+  }
+
+  .flash.alert {
+    background-color: #ffdddd;
+    color: #a94442;
+    border: 1px solid #a94442;
+    text-align: center;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .modal-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
